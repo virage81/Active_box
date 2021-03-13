@@ -6,6 +6,6 @@
   This project is simply, but I had a long break, so I wanted to make a simple website to remember everything.
 </p>
 <footer>
-  https://vk.com/te1ochka
+  https://vk.com/te1ochka <br>
   Gmail: karimovMINDS@gmail.com
 </footer>
