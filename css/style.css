@@ -428,9 +428,20 @@ body {
 
     overflow: hidden;
 }
+
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -450,8 +461,9 @@ body {
 }
 
 .reviews__content {
+    position: relative;
     width: 50%;
-    padding: 110px 0 0 80px;
+    padding: 80px 0 0 80px;
 }
 
 .reviews__text {
@@ -473,6 +485,55 @@ body {
 
     color: #fff;
 }
+
+/* slick */
+.slick-slide {
+    outline: 0;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    width: 50%;
+
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 3px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+
+    outline: 0;
+
+    cursor: pointer;
+    
+    border-radius: 50%;
+
+    background: #8a5a7c;
+    border: 0;
+    padding: 0;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-active button {
+    background-color: #3a2534;
+}
+
 
 
 /* download */
@@ -757,7 +818,7 @@ media
     /* team 
     ===============*/
     .team__inner {
-        flex-direction: row;
+        display: block;
     }
 
     .team__item {
@@ -778,6 +839,7 @@ media
 
     .team__info {
         margin-left: 15px;
+        position: relative;
     }
 
     .team__name {
@@ -798,6 +860,13 @@ media
         position: absolute;
         bottom: 0;
         left: 0;
+    }
+
+    @media (max-width: 648px) {
+        .social {
+            position: relative;
+            margin-top: 10px;
+        }
     }
 
     .social--footer {
@@ -847,8 +916,6 @@ media
     .works__text {
         font-size: 12px;
     }
-    
-    
 
     /* reviews 
     ===============*/
@@ -875,6 +942,12 @@ media
     .reviews__img {
         left: -20%;
         transform: translate3d(-20%, -43%, 0)
+    }
+
+    /* social
+    ===============*/
+    .social {
+        position: relative;
     }
     
     /* download 

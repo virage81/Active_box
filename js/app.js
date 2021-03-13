@@ -32,6 +32,8 @@ $(function() {
 
         let elementOffset = $(blockID).offset().top;
 
+        nav.removeClass('show');
+
 
         $('html, body').animate({
             scrollTop: elementOffset - 100
@@ -44,10 +46,26 @@ $(function() {
 
     let nav = $('#nav');
     let navToggle = $('#navToggle');
+
+    
+
     $('#navToggle').on('click', function(event) {
         event.preventDefault();
 
         nav.toggleClass('show');
     })
+
+    // SlickJS
+    let slider = $('#reviewsSlider');
+
+    slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 300,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
 });
 
