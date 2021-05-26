@@ -321,29 +321,26 @@ body {
 
 /* team */ 
 .team {
-    margin-top: 100px;
+    margin: 100px 0 70px;
 }
 
 .team__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 0 -15px;
 }
 
 .team__item {
-    width: 270px;
-    height: auto;
-    text-align: left;
-}
-
-.team__item:last-child {
-    margin-right: 0;
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
 }
 
 .team__photo {
-    max-width: 270px;
-    width: 100%;
+    display: block;
+    max-width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
 .team__info {
@@ -351,34 +348,34 @@ body {
 }
 
 .team__name {
-    margin: 30px 0 15px;
+    margin-bottom: 8px;
 
     font-size: 22px;
     color: #2d3033;
 }
 
 .team__prof {
+    margin-bottom: 15px;
+
     font-size: 13px;
-    text-transform: uppercase;
     color: #e84545;
+    text-transform: uppercase;
 }
 
 .team__text {
-    margin-top: 30px;
+    margin-bottom: 20px;
 
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 1.5;
     color: #6c7279;
 }
 
 .social {
     display: flex;
-
-    margin-top: 30px;
 }
 
 .social--footer {
     justify-content: center;
-    margin-top: 0;
 }
 
 .social--footer .social__item {
@@ -447,8 +444,11 @@ body {
 
 .reviews__img {
     max-width: 985px;
+    
     width: 100%;
     height: auto;
+    
+    margin: 0 auto;
 
     object-fit: cover;
 }
@@ -456,7 +456,7 @@ body {
 .reviews__content {
     position: relative;
     width: 50%;
-    padding: 80px 0 0 80px;
+    padding: 50px 0 0 80px;
 }
 
 .reviews__text {
@@ -669,20 +669,6 @@ media
         font-size: 20px;
         margin: 30px 0 60px
     }
-
-    /* team 
-    ===============*/
-    .team__item {
-        width: 200px;
-    }
-
-    .team__name {
-        margin: 10px 0;
-    }
-    
-    .team__text {
-        margin-top: 20px;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -753,34 +739,20 @@ media
 
     /* team 
     ===============*/
-    .team__inner {
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 0;
-    }
 
     .team__item {
-        width: 270px;
-        margin-bottom: 30px;
+        width: 50%;
+
+        text-align: center;
     }
 
-    .team__item:last-child {
-        margin-bottom: 0;
+    .team__photo {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .team__name {
-        font-size: 20px;
-        margin: 10px 0 5px;
-    }
-
-    .team__prof {
-        font-size: 11px;
-    }
-
-    .team__text {
-        width: auto;
-        margin-top: 10px;
-        font-size: 12px;
+    .social {
+        justify-content: center;
     }
 
     /* reviews 
@@ -809,58 +781,18 @@ media
 @media (max-width: 768px) {
     /* team 
     ===============*/
-    .team__inner {
-        flex-direction: column;
+    .team {
+        margin: 60px 0 30px;
     }
 
     .team__item {
-        display: flex;
-
         width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .team__item:last-child {
-        margin-bottom: 0;
-    }
-
-    .team__photo {
-        max-width: 240px;
-        width: 100%;
-        height: auto;
-    }
-
-    .team__info {
-        margin-left: 15px;
-        position: relative;
-    }
-
-    .team__name {
-        font-size: 20px;
-        margin: 0 0 5px;
-    }
-
-    .team__prof {
-        font-size: 11px;
-    }
-
-    .team__text {
-        margin-top: 10px;
-        font-size: 12px;
     }
     
-    .social {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+    
     
     .social--footer {
         position: relative;
-    }
-
-    .slick-dots {
-
     }
 }
 
@@ -973,7 +905,7 @@ media
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 460px) {
     .team__item {
         flex-direction: column;
         text-align: center;
