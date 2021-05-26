@@ -341,8 +341,8 @@ body {
 }
 
 .team__photo {
-    width: 100%;
     max-width: 270px;
+    width: 100%;
     height: auto;
 }
 
@@ -430,11 +430,11 @@ body {
 }
 
 .reviews__slider {
-    height: 500px;
+    height: auto;
     overflow: hidden;
 }
 
-.reviews__slider.slick-initialized {
+.reviews__slider .slick-initialized {
     height: auto;
 }
 
@@ -444,20 +444,13 @@ body {
     overflow: hidden;
 }
 
-.reviews__photo {
-    position: relative;
-
-    width: 50%;
-    height: 500px;
-}
 
 .reviews__img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: 1;
+    max-width: 985px;
+    width: 100%;
+    height: auto;
 
-    transform: translate3d(0, -43%, 0);
+    object-fit: cover;
 }
 
 .reviews__content {
@@ -662,7 +655,7 @@ media
 
 @media (max-width: 1200px) {
     .container {
-        width: 90%;
+        padding: 0 20px;
     }
 
     /* intro 
@@ -763,7 +756,7 @@ media
     .team__inner {
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 0 50px;
+        padding: 0;
     }
 
     .team__item {
@@ -807,8 +800,7 @@ media
         line-height: 16px;
     }
 
-    .reviews__photo {
-        overflow: hidden;
+    .reviews__img {
         width: 100%;
     }
 
@@ -818,7 +810,7 @@ media
     /* team 
     ===============*/
     .team__inner {
-        display: block;
+        flex-direction: column;
     }
 
     .team__item {
@@ -833,8 +825,9 @@ media
     }
 
     .team__photo {
-        width: 240px;
-        height: 240px;
+        max-width: 240px;
+        width: 100%;
+        height: auto;
     }
 
     .team__info {
@@ -861,16 +854,25 @@ media
         bottom: 0;
         left: 0;
     }
-
-    @media (max-width: 648px) {
-        .social {
-            position: relative;
-            margin-top: 10px;
-        }
-    }
-
+    
     .social--footer {
         position: relative;
+    }
+
+    .slick-dots {
+
+    }
+}
+
+@media (max-width: 648px) {
+    .social {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .social__item {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -934,16 +936,6 @@ media
         line-height: 16px;
     }
 
-    .reviews__photo {
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .reviews__img {
-        left: -20%;
-        transform: translate3d(-20%, -43%, 0)
-    }
-
     /* social
     ===============*/
     .social {
@@ -981,6 +973,24 @@ media
     }
 }
 
+@media (max-width: 360px) {
+    .team__item {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .team__info {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .team__photo {
+        margin: 0 auto;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
 
 
